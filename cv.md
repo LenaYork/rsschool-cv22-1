@@ -71,7 +71,7 @@ I graduated from BSTTU in 2013, got a bachelor degree as a psychologyst and an E
 * udemy courses ("Complete Web Developer Course" is still in process)
 * html academy
 * sololearn 
-* and of course geekbrains
+* and of course geekbrains ;)
 
 ---
 
