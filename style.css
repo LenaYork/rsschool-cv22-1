@@ -1,3 +1,8 @@
+html {
+    transition: 1s;
+    scroll-behavior: smooth;
+}
+
 @media all and (max-width: 950px) {
     .code-example-pic {
         height: 150px;
@@ -18,8 +23,65 @@
     }
 }
 
+@media all and (max-width: 630px) {
+    h1 {
+        font-size: 30px;
+        padding-bottom: 40px;
+    }
+
+    .avatar-pic {
+        display: none;    
+    }
+}
+
+@media all and (max-width: 525px) {
+    h1 {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+@media all and (max-width: 450px) {
+   
+}
+
+
 body {
     background-color: #84b6f7;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .menu-container {
+    position: relative;
+} */
+
+.menu-container {
+    width: 150px;
+}
+
+.header {
+    position: relative;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.menu-icon:hover {
+    /* transform: rotate(360deg);*/
+    width: 50px;
+    transition: 2s; 
+}
+
+.menu-nav {
+    position: absolute;
+    right: 45px;
 }
 
 .container {
@@ -30,15 +92,19 @@ body {
     box-shadow: 10px 5px 5px #0d0daf;
 }
 
+.main {
+    padding-top: 70px;
+}
+
 h1 {
     color: burlywood;
 }
 
- h3 {
+h2 {
     color: #4d4444;
 }
 
-h3 {
+h2 {
     padding: 5px 15px;
     background-color: #84b6f7;
     border-radius: 10px;
@@ -55,7 +121,7 @@ a {
 
 a:hover {
     color:#8686ee;
-    font-weight: bold;
+    text-shadow: 2px 2px 3px #020136;
 }
 
 a:visited {
@@ -83,6 +149,10 @@ ul {
     list-style: none;
 }
 
+.contacts ul li:before {
+    content: '➢';
+}
+
 .skills ul li:before {
     content: '✓ ';
 }
@@ -95,11 +165,47 @@ ul {
     list-style-type: circle;
 }
 
+.experience ul li:before {
+    content: '';
+}
+
 p {
     padding: 0 5px;
 }
 
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo-pic {
+    width: 100px;
+    align-self: center;
+}
+
+.code {
+    font-size: xx-small;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+.hidden-nav {
+    display: none;
+}
+
+
+/* .menu-nav {
+    display: none;
+} */
+
+/* .menu-icon:hover ~ .menu-nav{
+    display: block;
+    transition: 1s;
+} */
+
+.menu-nav .menu-ul li a:hover {
+    color:#0d0daf;
+    text-shadow: 10px 5px 5px #cfcff1 ;
 }

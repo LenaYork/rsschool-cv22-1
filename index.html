@@ -11,103 +11,159 @@
     <div class="container">
         <header class="header">
             <h1>Alena Barysheva CV</h1>
+            <div class="menu-container">
+                <img class="menu-icon" src="./media/menu-icon48.png" alt="menu-icon" id="menu-icon">
+                <nav class="menu-nav hidden-nav" id="menu-nav">
+                    <ul class="menu-ul">
+                        <li><a href="#basic-info">About me</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#code-example">Code example</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#english-level">English</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <section class="basic-info" id="basic-info">
-            <h3>About Me</h3>
-            <div class="bio">
-                <p>I’ve always been interested in computer science
-                    and now that I’m adult I’d like to finaly follow this desire of mine.
-                    Having been teaching English for many years 
-                    I’ve realized how important the language is when it comes to learning, 
-                    especially learning programming.
-                    Knowing the language helps me a lot since there’re so many decent courses and videos in English.
-                    I love the process of coding and finding solutions. 
-                    My enthusiasm, willing to learn new things 
-                    and hopefully theoretical knowledge will help make my lack of experience a temporary thing.
+        <main class="main">
+            <section class="basic-info" id="basic-info">
+                <h2>About Me</h2>
+                <div class="bio">
+                    <p>I’ve always been interested in computer science
+                        and now that I’m adult I’d like to finaly follow this desire of mine.
+                        Having been teaching English for many years 
+                        I’ve realized how important the language is when it comes to learning, 
+                        especially learning programming.
+                        Knowing the language helps me a lot since there’re so many decent courses and videos in English.
+                        I love the process of coding and finding solutions. 
+                        My enthusiasm, willing to learn new things 
+                        and hopefully theoretical knowledge will help make my lack of experience a temporary thing.
+                    </p>
+                    <img src="./media/avatar.jpg" alt="avatar" class="avatar-pic">
+                </div>
+            </section>
+
+            <section class="contacts" id="contacts">
+                <h2>Contacts</h2>
+                <p>You can contact me via:</p>
+                <ul>
+                    <li>email: <a href="mailto:leenabarysheva@gmail.com">leenabarysheva@gmail.com</a></li>
+                    <li>telegram: <a href="https://t.me/happiness1000">me on telegram</a></li>
+                    <li>facebook: <a href="https://www.facebook.com/" title="sorry I have no clue who you are so no real links!">me on facebook</a></li>
+                </ul>
+            </section>
+    
+            <section class="skills" id="skills">
+                <h2>My skills</h2>
+                <p>I have been using:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap and jQuery libraries</li>
+                    <li>ReactJS for SPA</li>
+                    <li>Git VCS</li>
+                    <li>Wordpress CMS</li>
+                </ul>
+                <p>Besides, I have basic knowledge of <em>PHP</em> and <em>SQL</em>.</p>
+            </section>
+    
+            <section class="code-example" id="code-example">
+                <h2>Code Example</h2>
+                <p>Here you can have a look at my code example:</p>
+                <ul>
+                    <li><a href="https://github.com/LenaYork/horoscope" target="_blank">Horoscope</a></li>
+                    <li><a href="https://github.com/LenaYork/Cubs" target="_blank">Learn English words</a></li>
+                    <li><a href="https://github.com/LenaYork/Clock" target="_blank">Clock</a></li>
+                    <li><a href="https://github.com/LenaYork/English-Teacher" target="_blank">Teacher Webpage</a></li>
+                    <li><a href="https://github.com/LenaYork/Caller-ID" target="_blank">Caller ID</a></li>
+                </ul>
+            
+                <p>Here is a short code example:</p>
+                <pre>
+                    <code class="code">
+                    //get user's character name
+                    document.querySelector("#getQueryName").addEventListener("click", function() {
+                    characterName = document.querySelector("#queryName").value;
+
+                    fetch(`http://hp-api.herokuapp.com/api/characters`)
+                        .then(resp => resp.json())
+                        .then(response => {
+                            recievedData = response;
+                            characterInfo = recievedData.filter( (elem) => elem.name == characterName);
+                                if (characterInfo.length > 0) { //if the name is found
+                                    receivedCharacterInfo = characterInfo[0];
+                                    createItem(receivedCharacterInfo);
+                                } else console.log(`Oops! There is no ${characterName} in Harry Potter Universe! Try smth else`);
+                            }
+                        );
+                    });
+                </code>
+            </pre>
+                
+            </section>
+    
+            <section class="experience" id="experience">
+                <h2>Work Experience</h2>
+                <p> My coding experience includes:</p>
+                <ol>
+                    <li>Adding markup and script to websites</li>
+                    <li>Creating online-shops using <em>Wordpress</em>, <em>JavaScript</em> and <em>PHP</em></li>
+                    <li>Making simple games and webpages as a part of my self-education.</li>
+                </ol>
+                <p>I have been making websites with the help of Wordpress CMS for a couple of years (online shops mostly).
+                    I also was a part-time system administrator in a Minsk Gestalt Institute for 2 years.
                 </p>
-                <img src="./media/avatar.jpg" alt="avatar" class="avatar-pic">
-            </div>
-        </section>
-
-        <section class="skills" id="skills">
-            <h3>My skills</h3>
-            <p>I have been using:</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Bootstrap and jQuery libraries</li>
-                <li>ReactJS for SPA</li>
-                <li>Git VCS</li>
-                <li>Wordpress CMS</li>
-            </ul>
-            <p>Besides, I have basic knowledge of <em>PHP</em> and <em>SQL</em>.</p>
-        </section>
-
-        <section class="code-example" id="code-example">
-            <h3>Code Example</h3>
-            <p>Here you can have a look at my code example:</p>
-            <ul>
-                <li><a href="https://github.com/LenaYork/horoscope" target="_blank">Horoscope</a></li>
-                <li><a href="https://github.com/LenaYork/Cubs" target="_blank">Learn English words</a></li>
-                <li><a href="https://github.com/LenaYork/Clock" target="_blank">Clock</a></li>
-                <li><a href="https://github.com/LenaYork/English-Teacher" target="_blank">Teacher Webpage</a></li>
-                <li><a href="https://github.com/LenaYork/Caller-ID" target="_blank">Caller ID</a></li>
-            </ul>
+                <p>Here are some examples (the code of each one can be seen in code example part above):</p>
+                <ul>
+                    <li><a href="https://lenayork.github.io/horoscope/" target="_blank">Horoscope game</a></li>
+                    <li><a href="https://lenayork.github.io/Cubs/" target="_blank">Learn English words game</a></li>
+                    <li><a href="https://lenayork.github.io/Caller-ID/" target="_blank">Caller ID</a></li>
+                    <li><a href="https://lenayork.github.io/Clock/" target="_blank">Clock</a></li>
+                </ul>
+            </section>
+    
+            <section class="education" id="education">
+                <h2>Education</h2>
+                <p>I graduated from BSTTU in 2013, got a bachelor degree as a psychologyst and an English teacher. </p>
+                <p>I’ve been learning programming online:</p>
+                <ol>
+                    <li>Udemy courses (“Complete Web Developer Course” is almost finished)</li>
+                    <li>HTML academy</li>
+                    <li>Sololearn</li>
+                    <li>and of course geekbrains ;)</li>
+                </ol>
+            </section>
+    
+            <section class="english-level" id="english-level">
+                <h2>English Level</h2>
+                <p>My <strong>English level</strong> is <strong>Advanced (C1)</strong> since that's my major. 
+                    I can communicate with people whether it's chatting or talking person-to-person,
+                    also can discuss a wide range of topics, watch movies, series and other videos without subs. 
+                    I can understant Indian English accent and differentiate south and north Indian English accents.
+                </p>
+    
+            </section>
+        </main>
         
-            <figure>
-                <figcaption>Here is a short code example:</figcaption>
-                <p><img src="./media/code-example.jpg" alt="code-example" class="code-example-pic"></p>
-            </figure>
-        </section>
-
-        <section class="experience" id="experience">
-            <h3>Work Experience</h3>
-            <p> My coding experience includes:</p>
-            <ol>
-                <li>Adding markup and script to websites</li>
-                <li>Creating online-shops using <em>Wordpress</em>, <em>JavaScript</em> and <em>PHP</em></li>
-                <li>Making simple games and webpages as a part of my self-education.</li>
-            </ol>
-            <p>I have been making websites with the help of Wordpress CMS for a couple of years (online shops mostly).
-                I also was a part-time system administrator in a Minsk Gestalt Institute for 2 years.
-            </p>
-            <p>Here are some examples (the code of each one can be seen in code example part above):</p>
-            <ul>
-                <li><a href="https://lenayork.github.io/horoscope/" target="_blank">Horoscope game</a></li>
-                <li><a href="https://lenayork.github.io/Cubs/" target="_blank">Learn English words game</a></li>
-                <li><a href="https://lenayork.github.io/Caller-ID/" target="_blank">Caller ID</a></li>
-                <li><a href="https://lenayork.github.io/Clock/" target="_blank">Clock</a></li>
-            </ul>
-        </section>
-
-        <section class="education" id="education">
-            <h3>Education</h3>
-            <p>I graduated from BSTTU in 2013, got a bachelor degree as a psychologyst and an English teacher. </p>
-            <p>I’ve been learning programming online:</p>
-            <ol>
-                <li>Udemy courses (“Complete Web Developer Course” is almost finished)</li>
-                <li>HTML academy</li>
-                <li>Sololearn</li>
-                <li>and of course geekbrains ;)</li>
-            </ol>
-        </section>
-
-        <section class="english-level" id="english-level">
-            <h3>English Level</h3>
-            <p>My <strong>English level</strong> is <strong>Advanced (C1)</strong> since that's my major. 
-                I can communicate with people whether it's chatting or talking person-to-person,
-                also can discuss a wide range of topics, watch movies, series and other videos without subs. 
-                I can understant Indian English accent and differentiate south and north Indian English accents.
-            </p>
-
-        </section>
 
         <footer class="footer">
-            <p><a href="mailto:leenabarysheva@gmail.com">leenabarysheva@gmail.com</a></p>
+            <p><a href="github.com/lenayork">github</a></p>
+            <!-- <p><a href="mailto:leenabarysheva@gmail.com">leenabarysheva@gmail.com</a></p> -->
             <p>2022 &copy; </p>
+            <a href="https://rs.school/js/" target="_blank"><img src="https://rs.school/images/rs_school_js.svg" alt="rsschool logo" class="logo-pic"></a>
         </footer>
-    </div>    
+    </div>  
+    
+    <script>
+        const menuIcon = document.querySelector("#menu-icon");
+        const menuNav = document.querySelector("#menu-nav");
+        menuIcon.addEventListener("click", function() {
+            // alert('works!');
+            menuNav.classList.toggle("hidden-nav");
+        })
+    </script>
 </body>
 </html>
